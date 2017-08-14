@@ -1,1 +1,14 @@
-== Achieve README
+
+Achieve → iinstagram 変更点
+現在のgit log { EXAM }
+
+削除したファイル
+・views/contacts
+・models/contact.rb
+・controllers/users/contacts_controller.rb
+・styleseets/contacts.scss
+・javascripts/contacts.coffee
+・helpers/contacts_helper.rb
+・javascripts/scrolltop
+・view/top
+・

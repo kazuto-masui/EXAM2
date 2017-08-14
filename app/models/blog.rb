@@ -1,4 +1,5 @@
 class Blog < ActiveRecord::Base
-    validates :title, presence: true
+  mount_uploader :avatar, AvatarUploader
+  validates :avatar,:content, presence: true
     belongs_to :user
 end

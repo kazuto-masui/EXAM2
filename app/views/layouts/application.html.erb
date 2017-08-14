@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Achieve</title>
+  <title>iinstagram</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -20,18 +20,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to "Achieve", root_path, class: "navbar-brand" %>
+      <%= link_to "iinstagram", root_path, class: "navbar-brand" %>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "お問い合わせ", new_contact_path %></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><%= link_to "ブログ", blogs_path %></li>
-          </ul>
-        </li>
+        <!-- <li><%= link_to "お問い合わせ", new_contact_path %></li> -->
+
+        <li><%= link_to "写真投稿", new_blog_path %></li>
         <% if user_signed_in? %>
          <li><%= link_to 'マイページ', edit_user_registration_path %></li>
          <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
@@ -45,11 +41,15 @@
    </nav>
   </header>
 
-<%= yield %>
+  <div class="container">
+    <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
+      <%= yield %>
+    </div>
+  </div>
 
   <footer>
-    <p>運営会社DIVE INTO CODE株式会社</p>
-    <p>© 2015-2016 Copyright DIVE INTO CODE Corp.</p>
+    <p>運営会社 KAZUTO MASUI 株式会社</p>
+    <p>© 1989-2017 Copyright KAZUTO MASUI Corp.</p>
   </footer>
 
 </body>

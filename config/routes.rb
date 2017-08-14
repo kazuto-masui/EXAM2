@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root 'blogs#index'
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users,controllers: {
     registrations: "users/registrations",
@@ -16,8 +18,6 @@ Rails.application.routes.draw do
     post :confirm
    end
   end
-
-  root 'top#index'
 
   if Rails.env.development?
    mount LetterOpenerWeb::Engine, at: "/letter_opener"

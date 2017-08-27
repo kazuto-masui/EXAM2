@@ -3,9 +3,13 @@
 <br />
 <% @blogs.each do |blog| %>
 <div>
-  <p><%= image_tag(blog.avatar) %></p>
+  <p><%= image_tag(blog.avatar, class:"blogImg") %></p>
   <p><%= blog.content %></p>
-  <p><%= blog.user.name %></p>
+  <% if blog.user %>
+    <p><%= blog.user.name %></p>
+  <% else %>
+    <p>no user</p>
+  <% end %>
   <%= link_to "編集", edit_blog_path(blog.id), class: 'btn btn-default btn-sm btn-success' %>
   <%= link_to "削除", blog_path(blog.id), method: :delete, data: { confirm: '本当に削除していいですか？'}, class: 'btn btn-default btn-sm btn btn-danger' %>
 </div>
